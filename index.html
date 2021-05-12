@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckforVaccine</title>
+    <link rel="stylesheet" href="./index.css">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+        <div class="row g-0" id="aa">
+            <div class="col-sm-12 col-md-4 col-lg-6  ">
+                <div class="clogo">
+                    <a href="www.inventeurs.in">
+                        <img src="./inventeurs.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="ctext">
+                    <h1>Covid Vaccine <br>Registration</h1>
+                    <hr>
+                </div>
+                <div class="cinfo">
+                    <h5>For more info go to</h5>
+                    <h5 ><a id="webid" href="www.inventeurs.in">www.inventeurs.in</a></h5>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-6">
+                <div class="detail-box">
+                    <div class="heading">
+                        <h2>Vaccine Slots</h2>
+                        <h6>Search for vaccine slots</h6>
+                    </div>
+
+                    <div class="formm">
+                        <div class="f-sec justify-content-center">
+                            <h5>Pincode</h5>
+                            <div class="justify-content-center">
+
+                                <input type="number" placeholder="Pincode" name="Pincode">
+                            </div>
+                        </div>
+                        
+                        <div class="f-sec">
+                            <h5>State</h5>
+                            <div class="dropdown">
+                                <input type="text" placeholder="State" name="State" list="asdf">
+                                <datalist id="asdf">
+                                    <option value="J&K">
+                                    <option value="Hello">
+                                    <option value="Hello">
+                                    <option value="Hello">
+                                    <option value="Hello">
+                                </datalist>
+                            </div>
+                        </div>
+
+                        <div class="f-sec">
+                            <h5>District</h5>
+                            <input type="text" placeholder="District" name="District" list="dis">
+                            <datalist id="dis">
+                                <option value="J&K">
+                                <option value="Hello">
+                                <option value="Hello">
+                                <option value="Hello">
+                                <option value="Hello">
+                            </datalist>
+                        </div>
+                        
+                        <div class="f-sec">
+                            <h5>Age</h5>
+                            <div class="ctrbtn">
+                                <input class="btn  cbtn" type="button" value="18+" id="btn1" >
+                                <!-- <input type="button" onclick="button_toggle" value="18+" id="btn1"> -->
+                                <input class="btn  cbtn" type="button" value="45+" id="btn2">
+                            </div>
+                        </div>
+                        <div class="f-sec">
+                            <h5>Vaccine Type</h5>
+                            <div class="ctrbtn">
+                                <input class="btn  cbtn2" type="button" value="Covishield" id="btn3">
+                                <input class="btn  cbtn2" type="button" value="Covaxin" id="btn4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid justify-content-center">
+                        <button class="btn  cbtn" type="submit" id="search">Search Slots</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>

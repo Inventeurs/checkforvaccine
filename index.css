@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background-image: url("./back.png");
+    background-color: #FAFAFA;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* overflow-y: hidden;
+    overflow-x: hidden;  */
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#aa{
+    height: 100vh;
+    padding: 4% 0;
+}
+
+/* ---------------------------------------RIGHT DIV----------------------------------- */
+.detail-box{
+    /* padding: 10%; */
+    height: 100%;
+    width: 60%;
+    background-color: #76757E;
+    border-radius: 60px;
+    color: white;
+    margin: 0 auto;
+}
+
+.heading{
+    text-align: center;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+
+.heading h2{
+    font-weight: 700;
+}
+
+.formm{
+    /* padding-left: 3em; */
+    align-content: center;
+}
+
+.f-sec{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.f-sec h5{
+    font-weight: 700;
+    text-align: center;
+}
+
+.f-sec input[type=text]{
+    background-color: #6B6974;
+    border-radius: 50em;
+    border: none;
+    padding-left: 30px;
+    color: white;
+    width: 85%;
+    height: 2.5em;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 7.5%;
+}
+.f-sec input[type=text]:focus{
+    background-color: #6B6974;
+    border-radius: 50em;
+    border: none;
+    padding-left: 30px;
+    color: white;
+    width: 85%;
+    height: 2.5em;
+    -moz-appearance: textfield;
+    outline: none;
+    margin-left: 7.5%;
+}
+
+.f-sec input[type=number]{
+    background-color: #6B6974;
+    border-radius: 50em;
+    border: none;
+    padding-left: 30px;
+    color: white;
+    width: 85%;
+    height: 2.5em;
+    -moz-appearance: textfield;
+    margin-left: 7.5%;
+}
+.f-sec input[type=number]:focus{
+    background-color: #6B6974;
+    border-radius: 50em;
+    border: none;
+    padding-left: 30px;
+    color: white;
+    width: 85%;
+    height: 2.5em;
+    -moz-appearance: textfield;
+    outline: none;
+    margin-left: 7.5%;
+}
+.ctrbtn{
+    display: flex;
+    justify-content: center;
+}
+.f-sec #btn1{
+    width: 8em;
+    border-radius: 50px;
+}
+
+.f-sec #btn2{
+    margin-left: 2.5em;
+    width: 8em;
+    border-radius: 50px;
+}
+
+.f-sec #btn3{
+    width: 8em;
+    border-radius: 50px;
+}
+
+.f-sec #btn4{
+    margin-left: 2.5em;
+    width: 8em;
+    border-radius: 50px;
+}
+
+#search{
+    border-radius: 50px;
+    margin-top: 1em;
+    width: 14em;
+    font-weight: 700;
+    background-color: #FF9629;
+    color: white;
+    border: none;
+    box-shadow: none;
+}
+#search:hover{
+    background-color: #f38e21;
+    box-shadow: none;
+}
+
+ .f-sec .cbtn{
+    border: none;
+    background-color: #6B6974;
+    box-shadow: none;
+    color: white;
+}
+ .f-sec .cbtn:hover{
+    border: none;
+    background-color: #656469;
+    color: white;
+}
+
+ .f-sec .cbtn:focus{
+    border: none;
+    box-shadow: none;
+    background-color: #FF9629;
+    color: white;
+    outline: none;
+
+}
+ .f-sec .cbtn2{
+    border: none;
+    background-color: #6B6974;
+    box-shadow: none;
+    color: white;
+}
+ .f-sec .cbtn2:hover{
+    border: none;
+    background-color: #656469;
+    color: white;
+}
+
+ .f-sec .cbtn2:focus{
+    border: none;
+    box-shadow: none;
+    background-color: #FF9629;
+    color: white;
+    outline: none;
+
+}
+/* ----------------------------------------------------LEFT DIV------------------------------------------- */
+
+  .clogo{
+      width: 100px;
+      height: 100px;
+      margin-left: 50px;
+  }
+
+  .ctext{
+      padding-top: 150px;
+      margin-left: 50px;
+      color: #FF9629;
+  }
+  .ctext h1{
+    font-weight: 700;
+  }
+  .ctext hr{
+    width: 194px;
+    opacity: 1;
+  }
+  .ctext hr:not([size]) {
+    height: 6px;
+    border-radius: 1000px;
+}
+
+.cinfo{
+    margin-left: 50px;
+    padding-top: 170px;
+    color: #76747F;
+}
+#webid{
+    font-weight: 700;
+    text-decoration: none;
+    color: #76747F;
+}
+
+/* ---------------------------------------MEDIA QUERY------------------------------------------------------------------- */
+
+
+
+
+@media only screen and (max-width: 1200px){
+
+    .detail-box{
+        /* padding: 10%; */
+        height: 93vh;
+        width: 65vh;
+        background-color: #76757E;
+        border-radius: 60px;
+        color: white;
+        margin: 0 auto;
+        /* margin-left: -50px; */
+    }
+    .cinfo{
+        margin-left: 50px;
+        padding-top: 130px;
+        color: #76747F;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .ctext{
+        display: none;
+    }
+    .cinfo{
+        display: none;
+    }
+    .clogo{
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+    }
+
+    .detail-box{
+        /* padding: 10%; */
+        height: 104%;
+        width: 100%;
+        background-color: #76757E;
+        border-radius: 50px 50px 0 0 ;
+        color: white;
+        margin: 0 auto;
+    }
+
+    .heading{
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 0.7em;
+    }
+    
+    .heading h2{
+        font-weight: 700;
+        font-size: 1.5em;
+    }
+    .heading h6{
+        font-size: 1em;
+    }
+    .formm{
+        padding-left: 0;
+    }
+    .f-sec h5{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .f-sec input[type=text]{
+        height: 2.5em;
+        /* font-size: 1em; */
+        margin-left: 15%;
+        width:70%;
+    }
+    .f-sec input[type=text]:focus{
+        height: 2.5em;
+        /* font-size: 1em; */
+        margin-left: 15%;
+        width:70%;
+    }
+    .f-sec input[type=number]{
+        height: 2.5em;
+        font-size: 1em;
+        margin-left: 15%;
+        width:70%;
+    }
+    .f-sec input[type=number]:focus{
+        height: 2.5em;
+        font-size: 1em;
+        margin-left: 15%;
+        width:70%;
+    }
+    
+    .f-sec #btn2{
+        margin-left: 1em;
+
+    }
+    
+    
+    .f-sec #btn4{
+        margin-left: 1em;
+    }
+}
+@media only screen and (max-width: 380px){
+    .ctext{
+        display: none;
+    }
+    .cinfo{
+        display: none;
+    }
+    .clogo{
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+    }
+
+    .detail-box{
+        /* padding: 10%; */
+        height: 104%;
+        width: 100%;
+        background-color: #76757E;
+        border-radius: 50px 50px 0 0 ;
+        color: white;
+        margin: 0 auto;
+    }
+
+    .heading{
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 0.7em;
+    }
+    
+    .heading h2{
+        font-weight: 700;
+        font-size: 1.5em;
+    }
+    .heading h6{
+        font-size: 1em;
+    }
+    .formm{
+        padding-left: 0;
+    }
+    .f-sec h5{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .f-sec input[type=text]{
+        height: 2.5em;
+        /* font-size: 1em; */
+        margin-left: 12.5%;
+        width:75%;
+    }
+    .f-sec input[type=text]:focus{
+        height: 2.5em;
+        /* font-size: 1em; */
+        margin-left: 12.5%;
+        width:75%;
+    }
+    .f-sec input[type=number]{
+        height: 2.5em;
+        font-size: 1em;
+        margin-left: 12.5%;
+        width:75%;
+    }
+    .f-sec input[type=number]:focus{
+        height: 2.5em;
+        font-size: 1em;
+        margin-left: 12.5%;
+        width:75%;
+    }
+
+    
+    .f-sec #btn2{
+        margin-left: 1em;
+     
+    }
+    
+    .f-sec #btn4{
+        margin-left: 1em;
+        
+    }
+    .f-sec .cbtn{
+        border: none;
+        background-color: #FF9629;
+        color: white;
+        font-size: 0.9em;
+        width: 7em;
+    }
+}
+@media only screen and (max-width: 320px){
+    .ctext{
+        display: none;
+    }
+    .cinfo{
+        display: none;
+    }
+    .clogo{
+        width: 70px;
+        height: 70px;
+        margin: 0 auto;
+    }
+
+    .detail-box{
+        /* padding: 10%; */
+        height: 104%;
+        width: 100%;
+        background-color: #76757E;
+        border-radius: 50px 50px 0 0 ;
+        color: white;
+        margin: 0 auto;
+    }
+
+    .heading{
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 0.7em;
+    }
+    
+    .heading h2{
+        font-weight: 700;
+        font-size: 1.5em;
+    }
+    .heading h6{
+        font-size: 1em;
+    }
+    .formm{
+        padding-left: 0;
+    }
+    .f-sec h5{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .f-sec input[type=text]{
+        height: 2.5em;
+        /* font-size: 1em; */
+        margin-left: 12.5%;
+        width:75%;
+    }
+    .f-sec input[type=text]:focus{
+        height: 2.5em;
+        /* font-size: 1em; */
+        margin-left: 12.5%;
+        width:75%;
+    }
+    .f-sec input[type=number]{
+        height: 2.5em;
+        font-size: 1em;
+        margin-left: 12.5%;
+        width:75%;
+    }
+    .f-sec input[type=number]:focus{
+        height: 2.5em;
+        font-size: 1em;
+        margin-left: 12.5%;
+        width:75%;
+    }
+    
+    .f-sec #btn2{
+        margin-left: 1em;
+     
+    }
+    
+    
+    .f-sec #btn4{
+        margin-left: 1em;
+        
+    }
+    .f-sec .cbtn{
+        border: none;
+        background-color: #FF9629;
+        color: white;
+        font-size: 0.9em;
+        width: 7em;
+    }
+}
+/* ----------------------------------------EXTRA---------------------------------------------------------------------- */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #BFBFBF;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #BFBFBF;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #BFBFBF
+  }
+
+  /*---------------------------------- FOR PINCODE */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
