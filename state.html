@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckforVaccine</title>
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./search.css">
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -20,10 +19,10 @@
 <body>
     
         <div class="row g-0" id="aa">
-            <div class="col">
+            <div class="col-sm-12 col-md-5 col-lg-7  abc">
                 <div class="clogo">
                     <a href="www.inventeurs.in">
-                        <img src="./inventeurs.svg" alt="Logo">
+                        <img src="inventeurs.svg" alt="Logo">
                     </a>
                 </div>
                 <div class="ctext">
@@ -35,44 +34,58 @@
                     <h5 ><a id="webid" href="www.inventeurs.in">www.inventeurs.in</a></h5>
                 </div>
             </div>
-            <div class="box col">
+            <div class="col-sm-12 col-md-7 col-lg-5">
                 <div class="detail-box">
                     <div class="heading">
-                        <h2>Vaccine Slots</h2>
-                        <h6>Search for vaccine slots</h6>
+                        <h2><span style="color: #33C2DE">Covid</span> Vaccine Registration</h2>
+                        <h6>powered by <b>Inventeurs</b></h6>
+                        <br><br>
+                        <h6>Search for vaccination slots • Get notified</h6><br><br>
                     </div>
-                    <div id="show" style="display: none;">
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Center Name</th>
-                                <th scope="col">Available Slots</th>
-                                <th scope="col">Address</th>
-                              </tr>
-                            </thead>
-                            <tbody id="tbody1">
-                            </tbody>
-                          </table>
-                    </div>
-                    <div id="hide">
-                        <div class="formm">
-                            <div class="f-sec justify-content-center">
-                                <h5>Pincode</h5>
-                                <div class="justify-content-center">
-                                    <input id="pinc" type="number" placeholder="Pincode" name="Pincode">
-                                </div>
+
+                    <div class="formm" id="f2">
+                        <div class="f-sec justify-content-center">
+                            <h5>State</h5>
+                            <div class="justify-content-center">
+
+                                <input type="number" placeholder="State" name="Pincode">
+                            </div>
+                            <br><br>
+                             <h5>District</h5>
+                            <div class="justify-content-center">
+
+                                <input type="number" placeholder="District" name="Pincode">
                             </div>
                         </div>
-                        <div class="d-grid justify-content-center">
-                            <button onclick="test()"  class="btn  cbtn" type="submit" id="search">Search Slots</button>
+                        <br><br>
+                        <div class="or">
+                        OR
+                        <br>
+                            <a href="index.html" class="lin">
+                                <b>
+                                    Use Pincode 
+                                </b>
+                                
+                            </a>
+                        
                         </div>
+                    
+                    </div>
+                    <div class="d-grid" >
+                        <button class="btn  cbtn" type="submit" id="search" onclick="test()">Search Slots</button>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        function popup(){
+            var popp = document.getElementById(f2);
+            popp.classList.toggle("show");
+        }
+    </script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
