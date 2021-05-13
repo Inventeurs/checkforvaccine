@@ -1,6 +1,8 @@
 var pincoded;
 var sessions;
 function putstate(){
+    document.getElementById('show').style.display="block";
+    document.getElementById('hide').style.display="none";
     $.each(sessions, function (i) {
         console.log(sessions[i]);
         var statename = JSON.stringify(sessions[i].name);
@@ -18,6 +20,11 @@ function test(){
   .done(function( json ) {
       console.log(json.sessions);
       sessions= json.sessions;
-      putstate()
+      if(sessions.length == 0){
+          alert("Sorry no slot available");
+      }
+      else{
+        putstate();
+      }
   });
 }
