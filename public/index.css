@@ -40,7 +40,7 @@ body {
 }
 
 .heading{
-    padding-top: 1.5em;
+    /* padding-top: 1.5em; */
     padding-bottom: 1em;
     color: #535353;
     padding-left: 7.5%;
@@ -218,6 +218,28 @@ body {
     outline: none;
 
 }
+
+#show{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 60vh;
+}
+.r-uti{
+    margin-left: 7.5%;
+}
+
+.filter{
+    color: #535353;
+    border: 1px solid #FF9629;
+    background-color: transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.filter:hover, .active{
+    background-color: #FF9629;
+    color: white;
+}
 /* ----------------------------------------------------LEFT DIV------------------------------------------- */
 
   .clogo{
@@ -280,7 +302,7 @@ body {
 
 /* ---------------------------------------MEDIA QUERY------------------------------------------------------------------- */
 
-@media only screen and (max-width: 825px)
+@media only screen and (max-width: 764px)
 {
     .abc{
         display: none;
@@ -289,15 +311,18 @@ body {
     .heading,.formm,.d-grid{
         padding-left: 12%;
     }
+    #crd-cont{
+        margin-left: 12%;
+    }
     .card-cont .l-card{
         
-        border-radius: 1em;
-   
+        border-radius: 1em 1em 0 0;
+        /* margin-left: 12%; */
     }
     
     .card-cont .card-body{
         
-        border-radius:1em;
+        border-radius: 0 0 1em 1em;
     }
 }
 
@@ -332,8 +357,7 @@ body {
     /* color: black; */
     width: 90%;
     margin-left: 7.5%;
-    /* border-radius: 1em 0 0 1em; */
-    /* padding: 1em; */
+    cursor: pointer;
 }
 
 .l-card{
@@ -349,6 +373,7 @@ body {
     color: #535353;
     background-color: #FFECD2;
     border-radius: 0 1em 1em 0;
+    position: relative;
 }
 
 .card-body .slots span{
@@ -359,7 +384,7 @@ body {
     width: 100px;
 }
 
-.box{
+/* .box{
     display: flex;
     width: 392px;
     height: 283px;
@@ -369,11 +394,15 @@ body {
     margin: 5px;
     justify-content: center;
     background-color: #FFECD2;
-  }
+  } */
   .disp{
       justify-content: center;
   }
-  
+  .price{
+      position: absolute;
+      top: 17px;
+      right: 25px;
+  }
 
 /* ----------------------------------------EXTRA---------------------------------------------------------------------- */
 
@@ -396,3 +425,24 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* ------------------------------FOR SCROLLBAR  */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
