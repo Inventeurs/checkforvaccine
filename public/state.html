@@ -48,20 +48,26 @@
                             <h5>State</h5>
                             <div class="justify-content-center">
 
-                                <input type="text" placeholder="State" name="Pincode" list="statelist">
-                                <datalist id="statelist">
+                                <!-- <input  onclick="getstate()" type="text" placeholder="State" name="Pincode" list="statelist"> -->
+                                <select onclick="putstate()" name="" id="statelist">
+                                    <option value=''>Select State</option>
+                                </select>
+                                <!-- <datalist id="statelist">
                                     <option value="J&K"></option>
                                     <option value="Uttrakhand"></option>
                                     <option value="Tamil Nadu"></option>
                                     <option value="Goa"></option>
                                     <option value="Delhi"></option>
-                                </datalist>
+                                </datalist> -->
                             </div>
                             <br><br>
                              <h5>District</h5>
                             <div class="justify-content-center">
 
-                                <input type="text" placeholder="District" name="Pincode" list="districtlist">
+                                <!-- <input type="text" placeholder="District" name="Pincode" list="districtlist"> -->
+                                <select onclick=" putdist(); " name="" id="tbody1">
+                                    <option value=''>Select District</option>
+                                </select>
                                 <datalist id="districtlist">
                                     <option value="District 1"></option>
                                     <option value="District 2"></option>
@@ -87,7 +93,7 @@
                     
                     </div>
                     <div class="d-grid" >
-                        <button class="btn  cbtn" type="submit" id="search" onclick="test()">Search Slots</button>
+                        <button class="btn  cbtn" type="submit" id="search" onclick="result()">Search Slots</button>
                     </div>
                 </div>
             </div>

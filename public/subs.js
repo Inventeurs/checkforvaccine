@@ -30,10 +30,10 @@ function productAdd(product) {
          "application/json;charset=utf-8",
       data: JSON.stringify(product),
       success: function (product) {
-        console.log(product.otp);  
+        console.log(product);  
       },
-      error: function (request, message, error) {
-        handleException(request, message, error);
-      }
+      // error: function (request, message, error) {
+      //   handleException(request, message, error);
+      // }
     });
   }

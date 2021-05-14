@@ -1,5 +1,7 @@
 var pincoded;
 var sessions;
+var today = new Date();
+
 function putstate(){
     document.getElementById('backshow').style.display="block";
     document.getElementById('show').style.display="block";
@@ -47,7 +49,10 @@ function putstate(){
 
 function test(){
     pincoded = document.getElementById('pinc').value;
-    $.getJSON( "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin", { pincode:+pincoded, date: "20-05-2021" } )
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    if (date != ""){
+      console.log(date);
+    $.getJSON( 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode='+pincoded+'&date='+date)
   .done(function( json ) {
       console.log(json.sessions);
       sessions= json.sessions;
@@ -60,6 +65,11 @@ function test(){
         putstate();
       }
   });
+    }
+    else{
+      console.log("vishuddh")
+    }
+    
 }
 
 function detail(){
