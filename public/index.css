@@ -55,7 +55,9 @@ body {
 .heading h2{
     font-weight: 700;
 }
-
+datalist{
+    background-color: #fafafa;
+}
 .formm{
     /* padding-left: 3em; */
     align-content: center;
