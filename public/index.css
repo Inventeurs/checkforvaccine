@@ -226,6 +226,10 @@ datalist{
     overflow-x: hidden;
     height: 60vh;
 }
+#hide{
+    overflow-y:scroll;
+    
+}
 .r-uti{
     margin-left: 7.5%;
 }
