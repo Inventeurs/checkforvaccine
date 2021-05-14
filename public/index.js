@@ -1,24 +1,29 @@
 var pincoded;
 var sessions;
 function putstate(){
-    // document.getElementById('show').style.display="block";
-    // document.getElementById('hide').style.display="none";
-
-    
-    window.location = "./results.html"
+    document.getElementById('show').style.display="block";
+    document.getElementById('hide').style.display="none";    
+    // window.location = "./results.html"
     
     $.each(sessions, function (i) {
         console.log(sessions[i]);
         var statename = JSON.stringify(sessions[i].name);
         var stateid = JSON.stringify(sessions[i].center_id);
-        console.log(statename,stateid)
+        var address = JSON.stringify(sessions[i].address);
+        var capacity = JSON.stringify(sessions[i].available_capacity);
+        var vaccine = JSON.stringify(sessions[i].vaccine);
+        var slotd = JSON.stringify(sessions[i].from);
+        var date = JSON.stringify(sessions[i].date);
+        console.log(statename,stateid,capacity)
         // temp = '<option value='+stateid+'>'+statename+'</option>';
         // temp = '<tr> <th scope="row">1</th><td>' +sessions[i].name+'</td> <td>'+sessions[i].available_capacity+'</td> <td>'+sessions[i].address+'</td> </tr>';
         // $('#tbody1').append(temp);
 
-        var temp = '<div class="card-cont"><div class="card border-light mb-3" style="width: 85%;"><div class="row g-0"><div class="col-md-4 l-card"><h5 style="font-weight: 700;">Number of Slots</h5> <h1 style="font-weight: 700; font-size: 4em;">'+sessions[i].available_capacity+'</h1><h6>'+sessions[i].vaccine+'</h6></div><div class="col-md-8"><div class="card-body"><p style="font-weight: 700; margin-bottom: 10px;">'+13-05-2001+'</p><p style="font-weight: 700; margin-bottom: 5px;">'+sessions[i].name+'</p><p style=" margin-bottom: 10px;">'+sessions[i].address+'</p><p style="font-weight: 700; margin-bottom: 5px;">Slots</p><div class="slots"><div class="row"><div class="col-6 mb-3"><span>9AM-11AM</span></div><div class="col-6 mb-3"><span>11AM-1PM</span></div><div class="col-6 "><span>1PM-3PM</span></div><div class="col-6"><span>3PM-6PM</span></div></div></div></div></div></div></div></div>';
+        // var temp = '<div class="card vaccine-card"> <div class="card-body vaccine-card-body" > <h5 class="card-title">'+statename+'</h5> <p class="card-text">'+address+'</p> <p>Slot:'+capacity+'</p> <button type="button" class="btn btn-outline-primary" class= "timing-button">'+slotd+'</button> </div> </div>';
+        var temp = '<div class="card-cont"> <div class="card border-light mb-3"> <div class="row g-0"> <div class="col-md-4 l-card"> <h5 >Number of Slots</h5> <h1 >'+capacity+'</h1> <h6>'+vaccine+'</h6> </div> <div class="col-md-8"> <div class="card-body"> <h1>'+statename+'</h1> <p>'+address+'</p> <p class="date">'+date+'</p> </div> </div> </div> </div> </div>';
         $('#show').append(temp);
             });
+
 }
 
 function test(){
