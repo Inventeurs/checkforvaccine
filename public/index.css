@@ -37,6 +37,7 @@ body {
     color: white;
     margin: 0 auto;
     padding-top: 10vh;
+    overflow-y: scroll;
 }
 
 .heading{
@@ -344,6 +345,16 @@ datalist{
     margin-top: 1em;
     background-color: #1565c01a;
     border: 1px solid #1565c0;
+    color: #535353;
+    width: 60%;
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#done{
+    margin-top: 1em;
+    background-color: #15c0311a;
+    border: 1px solid #00c400;
     color: #535353;
     width: 60%;
     padding: 1em;
