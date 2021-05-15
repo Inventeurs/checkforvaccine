@@ -56,13 +56,6 @@ window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
 );
 function phoneAuth(){ 
   console.log("sent")
-
-//   var phone_number = window.intlTelInput(input,{
-//     separateDialCode: true,
-//      initialCountry: 'in',
-//      hiddenInput:"full",
-//     utilsScript: "./js/utils.js"
-// })
   var phoneNumber = $("#fnumber").val();
   // $("input[name='phone_number[full]'").val(phoneNumber);
  
@@ -85,9 +78,7 @@ function codeVerify(){
     submit();
     // alert("otp verified");
     document.getElementById('done').style.display="block";
-    
-    // console.log(user);
-    //yaha pr daalna h
+    $("#OTPCode").val("");
   })
   .catch(function(error){
     console.log(error);
