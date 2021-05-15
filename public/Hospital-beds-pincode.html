@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./method.js" defer></script>
-
+    <script src="./index.js" defer></script>
+    <!-- FONT KIT -->
     <script src="https://kit.fontawesome.com/d94e9b5196.js" crossorigin="anonymous"></script>
 </head>
 
@@ -26,7 +26,7 @@
         <div class="col-sm-12 col-md-5 col-lg-7  abc">
             <div class="clogo">
                 <a href="https://www.inventeurs.in/">
-                    <img src="inventeurs.svg" alt="Logo">
+                    <img src="./inventeurs.svg" alt="Logo">
                 </a>
             </div>
             <div class="ctext">
@@ -35,19 +35,24 @@
             </div>
             <div class="cinfo">
                 <h5>For more info go to</h5>
-                <h5><a id="webid" href="https://www.inventeurs.in/">www.inventeurs.in</a></h5>
+                <h5><a id="webid" href="https://www.inventeurs.in">www.inventeurs.in</a></h5>
             </div>
         </div>
         <div class="col-sm-12 col-md-7 col-lg-5">
             <div class="detail-box">
                 <div class="heading">
                     <div id="backshow" style="display: none;">
-                        <a href="./state.html" style="text-decoration: none; color: #535353;"><span><i class="fas fa-arrow-left" style="font-size: 25px; margin-right: 15px;"></i></span></a>
+                        <a href="./index.html" style="text-decoration: none; color: #535353;"><span><i
+                                    class="fas fa-arrow-left"
+                                    style="font-size: 25px; margin-right: 15px;"></i></span></a>
                     </div>
-                   <h2><span style="color: #FF9629">Covid</span> Vaccine Registration</h2>
-                    <h6>Need <a id="link-all" href="./Hospital-beds-state.html"><b>Hospital Beds?</b></a></h6>
                     <br>
-                    <h6>Search for vaccination slots • Get notified</h6>
+                    <h2>Search for <span style="color:#FF9629">Hospital Beds</span> </h2>
+                    <h6>Search for<a id="link-all" href="./index.html"><b> Vaccination Slots</b></a></h6>
+                    <br>
+                    <h6 id="e1">Search for hospital beds • Get notified</h6>
+
+
                 </div>
 
                 <div id="show" style="display: none;">
@@ -70,44 +75,39 @@
 
                     <div class="formm" id="f2">
                         <div class="f-sec justify-content-center">
-                            <h5>State</h5>
+                            <h5>Pincode</h5>
                             <div class="justify-content-center">
 
-                                <!-- <input  onclick="getstate()" type="text" placeholder="State" name="Pincode" list="statelist"> -->
-                                <select onclick="putstate()" name="" id="statelist">
-                                    <option value=''>Select State</option>
-                                </select>
-                                
-                            </div>
-                            <br>
-                            <h5>District</h5>
-                            <div class="justify-content-center">
-
-                                <!-- <input type="text" placeholder="District" name="Pincode" list="districtlist"> -->
-                                <select onclick=" putdist(); " name="" id="tbody1">
-                                    <option value=''>Select District</option>
-                                </select>
-
+                                <input id="pinc" type="number" placeholder="Pincode" name="Pincode">
                             </div>
                         </div>
 
+                        <!-- ---------------FOR NO SLOTS------------------ -->
                         <div id="warn" style="display: none;">
-                                
-                            <p style="font-size: 0.8em; margin-bottom: 0;"><i class="fas fa-times-circle" style="color: #ef4437; margin-right: 10px;"></i>No Slots Available for this pincode.</p>
-                            
+
+                            <p style="font-size: 0.8em; margin-bottom: 0;"><i class="fas fa-times-circle"
+                                    style="color: #ef4437; margin-right: 10px;"></i>No Slots Available for this pincode.
+                            </p>
+
                         </div>
                         <div id="noti" style="display: none;" onclick="detail()">
-                            
-                            <p style="font-size: 0.8em; margin-bottom: 0;"><i class="fas fa-bell" style="color: #1565c0; margin-right: 10px;"></i>Notify me when a slot opens up.<i class="fas fa-arrow-right" style="margin-left: 10%;"></i></p>
-                            
+
+                            <p style="font-size: 0.8em; margin-bottom: 0;"><i class="fas fa-bell"
+                                    style="color: #1565c0; margin-right: 10px;"></i>Notify me when a slot opens up.<i
+                                    class="fas fa-arrow-right" style="margin-left: 10%;"></i></p>
+
                         </div>
-                        
+                        <!-- ------------------------FOR COLLECTING USER INFO--------------------- -->
+                        <!-- <div id="info">
+                                
+                            </div> -->
+                        <!-- ---------------------  -->
                         <div class="or">
                             OR
                             <br>
-                            <a href="index.html" class="lin">
+                            <a href="./Hospital-beds-state.html" class="lin">
                                 <b>
-                                    Use Pincode
+                                    Use District and State
                                 </b>
 
                             </a>
@@ -116,8 +116,9 @@
 
                     </div>
                     <div class="d-grid">
-                        <button class="btn  cbtn" type="submit" id="search" onclick="result()">Search Slots</button>
+                        <button class="btn  cbtn" type="submit" id="search" onclick="test()">Search Slots</button>
                     </div>
+
                 </div>
                 <div id="siic">
                     <h6>powered by</h6>
@@ -139,6 +140,27 @@
             var popp = document.getElementById(f2);
             popp.classList.toggle("show");
         }
+        var input = document.getElementById("pinc");
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("search").click();
+            }
+        });
+
+        // --------------FOR FILTERS BUTTON-----------
+        var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("filter");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                if (current.length > 0) {
+                    current[0].className = current[0].className.replace(" active", "");
+                }
+                this.className += " active";
+            });
+        }
+
     </script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
