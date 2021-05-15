@@ -82,9 +82,9 @@ function codeVerify(){
   confirmationResult.confirm(code)
   .then(function(result){
     var user = result.user;
+    submit();
     alert("otp verified");
     // console.log(user);
-    // submit();
     //yaha pr daalna h
   })
   .catch(function(error){
