@@ -338,6 +338,7 @@ datalist{
     .card-cont .l-card{
         
         border-radius: 1em 1em 0 0;
+        padding-top: 20px;
         /* margin-left: 12%; */
     }
     

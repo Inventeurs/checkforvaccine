@@ -116,7 +116,7 @@
 
                     </div>
                     <div class="d-grid">
-                        <button class="btn  cbtn" type="submit" id="search" onclick="result()">Search Slots</button>
+                        <button class="btn  cbtn" type="submit" id="search" onclick="gotoempty()">Search Slots</button>
                     </div>
                 </div>
                 <div id="siic">
@@ -138,6 +138,9 @@
         function popup() {
             var popp = document.getElementById(f2);
             popp.classList.toggle("show");
+        }
+        function gotoempty(){
+            window.location = "./bedssample.html"
         }
     </script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->

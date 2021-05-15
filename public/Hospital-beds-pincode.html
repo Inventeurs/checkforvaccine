@@ -116,7 +116,7 @@
 
                     </div>
                     <div class="d-grid">
-                        <button class="btn  cbtn" type="submit" id="search" onclick="test()">Search Slots</button>
+                        <button class="btn  cbtn" type="submit" id="search" onclick="gotoempty()">Search Slots</button>
                     </div>
 
                 </div>
@@ -159,6 +159,9 @@
                 }
                 this.className += " active";
             });
+        }
+        function gotoempty(){
+            window.location = "./bedssample.html"
         }
 
     </script>
