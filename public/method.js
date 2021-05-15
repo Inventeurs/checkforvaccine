@@ -78,7 +78,8 @@ var resultid;
 function resultcards(){
   document.getElementById('backshow').style.display="block";
     document.getElementById('show').style.display="block";
-    document.getElementById('hide').style.display="none";    
+    document.getElementById('hide').style.display="none";  
+    document.getElementById('siic').style.display="none";  
     // window.location = "./results.html"
     
     $.each(sessions, function (i) {

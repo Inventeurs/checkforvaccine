@@ -246,6 +246,20 @@ datalist{
     background-color: #FF9629;
     color: white;
 }
+
+#siic{
+    position: absolute;
+    color: #535353;
+    bottom: 10px;
+    padding-left:  3.5%;
+}
+#siic img{
+    height: 12%;
+    width: 12%;
+}
+#siic a{
+    text-decoration: none;
+}
 /* ----------------------------------------------------LEFT DIV------------------------------------------- */
 
   .clogo{
@@ -330,6 +344,9 @@ datalist{
         
         border-radius: 0 0 1em 1em;
     }
+    #siic{
+        padding-left: 11.5%;
+    }
 }
 
 
@@ -411,14 +428,26 @@ datalist{
   }
 /* ---------------------------DROPDOWN FOR STATES-------------------------- */
 
-input datalist {
-    background: #fafafa;
-    color: #535353;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
+#statelist {
+    border: 0;
+    border-bottom: 2px solid #FF9629;
+    color: #555555;
+    width: 60%;
+    padding: 5px;
+    background-color: transparent;
 }
-
+#tbody1{
+    border: 0;
+    border-bottom: 2px solid #FF9629;
+    color: #555555;
+    width: 60%;
+    background-color: transparent;
+    padding: 5px;
+}
+option {
+   background-color: #FAFAFA;
+   color: #535353;
+}
 /* ----------------------------------------EXTRA---------------------------------------------------------------------- */
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
