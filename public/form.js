@@ -83,7 +83,9 @@ function codeVerify(){
   .then(function(result){
     var user = result.user;
     submit();
-    alert("otp verified");
+    // alert("otp verified");
+    document.getElementById('done').style.display="block";
+    
     // console.log(user);
     //yaha pr daalna h
   })
