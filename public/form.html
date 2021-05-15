@@ -35,7 +35,7 @@
                     <h5 ><a id="webid" href="www.inventeurs.in">www.inventeurs.in</a></h5>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-7 col-lg-5">
+            <div class="col-sm-12 col-md-7 col-lg-5" id="hide">
                 <div class="detail-box">
                     <div class="heading">
                         <a href="./index.html" style="text-decoration: none; color: #535353;">
@@ -66,6 +66,9 @@
                             <div class="justify-content-center">
 
                                 <input id="fnumber" type="number" placeholder="Enter Mobile Number" name="Number">
+                                <!-- <input id="OTPCode" type="number" placeholder="Enter Your OTP" name="Number" style="display: none;"> -->
+                                <!-- <span><button id="otpbtn" class="btn cbtn" onclick="codeVerify()" style="display: none;">verify</button> </span> -->
+                                <!-- <input id="phonebox" type="tel" name="phone_number[main]" placeholder="Phone Number" /> -->
                             </div>
                         </div>
                         <br>
@@ -74,6 +77,39 @@
                     </div>
                     <div class="d-grid" >
                         <button class="btn  cbtn" type="submit" id="search" onclick="phoneAuth()">Submit Details</button>
+                        <!-- <button class="btn  cbtn" id="sendCode">Submit Details</button>
+                        <button id="sendCode" type="button" onclick="phoneAuth()" class="otpbutton">SEND OTP</button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-7 col-lg-5" id="show" style="display: none;" >
+                <div class="detail-box">
+                    <div class="heading">
+                        <a href="./form.html" style="text-decoration: none; color: #535353;">
+                            <i class="fas fa-arrow-left" style="font-size: 25px;"></i>
+                        </a>
+                        <br><br>
+                        <h2><span style="color: #FF9629">Covid</span> Vaccine Registration</h2>
+                        <h6>powered by <b>Inventeurs</b></h6>
+                        <br>
+                        <h6>Enter OTP to verify your details</h6>
+                    </div>
+
+                    <div class="formm" id="f2">
+                        <div class="f-sec justify-content-center">
+                            <h5>OTP</h5>
+                            <div class="justify-content-center">
+
+                                <input id="OTPCode" type="number"  placeholder="Enter OTP" name="">
+
+                            </div>
+                        </div>
+                        <br>
+                    
+                    
+                    </div>
+                    <div class="d-grid" >
+                        <button class="btn  cbtn" type="submit" id="search" onclick="codeVerify()">Verify</button>
                     </div>
                 </div>
             </div>

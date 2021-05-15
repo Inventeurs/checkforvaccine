@@ -24,92 +24,70 @@ function submit(){
   ready();
   console.log(uname);
     // ----------------FOR STORING THE USER DATA AFTER VERIFYING THE PHONE NUMBER-----------------
-    // firebase.database().ref('Users/' + unumber).set({
-    //   Name: uname,
-    //   Pincode : upin,
-    //   Number: unumber,
-    // });
-    // window.location = "./otp.html";
+    firebase.database().ref('Users/' + unumber).set({
+      Name: uname,
+      Pincode : upin,
+      Number: unumber,
+    });
 }
 
 function done(){
   document.getElementById('done').style.display="block";
 }
 
-// -----------------PHONE AUTH-----------------------
 
-window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('search', {
-  'size': 'invisible',
-  'callback': (response) => {
-    // reCAPTCHA solved, allow signInWithPhoneNumber.
-    // submit();
-    // phoneAuth();
+
+// Phone auth
+
+
+
+
+window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+  "search",
+  {
+    'size':'invisible',
+    'callback': function(response){
+      phoneAuth();
+      document.getElementById('hide').style.display="none"
+      document.getElementById('show').style.display="block"
+    }
+
   }
-});
+);
+function phoneAuth(){ 
+  console.log("sent")
 
-recaptchaVerifier.render().then((widgetId) => {
-  window.recaptchaWidgetId = widgetId;
-});
-
-// ------------------FOR SENDING THE OTP
-function phoneAuth(){
-
-  unumber = document.getElementById('fnumber').value;
-  var appVerifier = window.recaptchaVerifier;
-  // console.log(unumber)
-  console.log(appVerifier)
-  firebase.auth().signInWithPhoneNumber(unumber, appVerifier)
-  .then(function(response) {
-    console.log(response);
-    window.confirmationResult = response;
-
-    alert("Message sent")
-    // ...
-  }).catch((error) => {
-    console.log("Message Not Sent")
-  });
-}
-
-// window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
-//   "search",
-//   {
-//     'size':'invisible',
-//     'callback': function(response){
-//       phoneAuth();
-//     }
-
-//   }
-// );
-// function phoneAuth(){ 
-//   console.log("sent")
 //   var phone_number = window.intlTelInput(input,{
 //     separateDialCode: true,
 //      initialCountry: 'in',
 //      hiddenInput:"full",
 //     utilsScript: "./js/utils.js"
 // })
-//   var phoneNumber = phone_number.getNumber(intlTelInputUtils.numberFormat.E164);
-//   $("input[name='phone_number[full]'").val(phoneNumber);
+  var phoneNumber = $("#fnumber").val();
+  // $("input[name='phone_number[full]'").val(phoneNumber);
  
-//   var verifier = window.recaptchaVerifier;
+  var verifier = window.recaptchaVerifier;
 
-//   firebase.auth().signInWithPhoneNumber(phoneNumber,verifier)
-//   .then(function(confirmationResult){
-//     window.confirmationResult = confirmationResult;
-//   })
-//   .catch(function(error){
-//     // alert(error);
-//   });
-// }
+  firebase.auth().signInWithPhoneNumber('+91'+phoneNumber,verifier)
+  .then(function(confirmationResult){
+    window.confirmationResult = confirmationResult;
+  })
+  .catch(function(error){
+    // alert(error);
+  });
+}
 
-// function codeVerify(){
-//   var code = document.getElementById("OTPCode").value;
-//   confirmationResult.confirm(code)
-//   .then(function(result){
-//     var user = result.user;
-//     console.log(user);
-//   })
-//   .catch(function(error){
-//     console.log(error);
-//   })
-// }
+function codeVerify(){
+  var code = document.getElementById("OTPCode").value;
+  confirmationResult.confirm(code)
+  .then(function(result){
+    var user = result.user;
+    alert("otp verified");
+    // console.log(user);
+    // submit();
+    //yaha pr daalna h
+  })
+  .catch(function(error){
+    console.log(error);
+  })
+}
