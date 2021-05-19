@@ -10,10 +10,11 @@ var today = new Date();
 // });
 $(document).ready(function () {
   getstate();
+  $("#statelist").change(function() {
+    getdist();
+  });
 });
-$("#statelist").change(function() {
-  getdist();
-});
+
 
 function getstate() {
   var api = 'https://cdn-api.co-vin.in/api/v2/admin/location/states';
